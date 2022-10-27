@@ -1,0 +1,47 @@
+<h2>Interpolation</h2>
+
+<div>
+	<p> Nome: {{ nome }} </p>
+	<p> Idade: {{ idade }} </p>
+	<p> {{ nome }} tem mais de 20 anos? </p>
+	<p>{{idade > 20 ? 'Sim' : 'Não' }} </p>
+	<p>Qual é o ano de nascimento de {{nome}}? </p>
+	<p>{{ anoAtual - idade}} </p>
+</div>
+
+<hr>
+
+<h2>Property Binding</h2>
+<form [formGroup]="form" (submit)="save()">
+	<div>
+		<input type="text" formControlName="hobby" placeholder="Digite seu Hobby">
+		<button type="submit" [disabled]="this.form.invalid">Enviar</button> <br>
+		<img class="mt-2" [src]="imgSrc" alt="imagem escrito Good Job" [hidden]="hide" style="max-width: 247px;">
+	</div>
+</form>
+
+<hr>
+
+<h2>Event Binding</h2>
+
+<div>
+	<button (click)="alertaInfo($event)">Evento</button>
+	<div class="mt-2 mb-2" (mousemove)="mouseMoveTeste($event)" style="background: red; width: 250px; height: 170px;">
+	</div>
+	Posição X:{{ position.x }} - Posição Y:{{ position.y }}
+</div>
+
+<hr>
+
+<h2>Two-Way Binding</h2>
+
+<div>
+	<div>
+		<label style="margin-right: 5px;"> Nome:</label>
+		<input type="text" [(ngModel)]="nome">
+	</div>
+	<div>
+		<label style="margin-right: 5px;">Idade:</label>
+		<input type="number" [(ngModel)]="idade">
+	</div>
+</div>
