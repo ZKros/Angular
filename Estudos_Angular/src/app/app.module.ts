@@ -6,12 +6,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		TitleComponent,
-		DataBindingComponent
+		DataBindingComponent,
+  DiretivasEstruturaisComponent
 	],
 	imports: [
 		BrowserModule,

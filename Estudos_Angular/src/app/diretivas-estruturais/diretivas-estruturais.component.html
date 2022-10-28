@@ -1,0 +1,25 @@
+<div>
+	<h2>Diretivas Estruturais *ngIf</h2>
+	<ng-container *ngIf="hide; else isFalse">
+		<div>
+			True
+		</div>
+	</ng-container>
+
+	<ng-template #isFalse>
+		<div>
+			False
+		</div>
+	</ng-template>
+
+	<button (click)="show()">Alterar</button>
+</div>
+
+<hr>
+
+<div>
+	<h2>Diretivas Estruturais *ngFor</h2>
+	<ul>
+		<li *ngFor="let item of items"> {{item.nome}} </li>
+	</ul>
+</div>
