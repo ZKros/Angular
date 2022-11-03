@@ -19,7 +19,32 @@
 
 <div>
 	<h2>Diretivas Estruturais *ngFor</h2>
+	<div>
+		<button (click)="addItems()">Adiciona Items</button>
+		<button (click)="deleteItems()">Deletar Items</button>
+	</div>
 	<ul>
-		<li *ngFor="let item of items"> {{item.nome}} </li>
+		<li *ngFor="let item of items; let i = index;">[{{i}}] {{item.nome}} </li>
 	</ul>
+</div>
+
+<hr>
+
+<div>
+	<h2>Diretivas Estrururais *ngSwitch</h2>
+	<label> Digite um número:</label>
+	<input type="number" [(ngModel)]="selectNumber">
+	<div class="d-flex justify-content-around" [ngSwitch]="selectNumber">
+		<b *ngSwitchCase="0"> Daniel</b>
+		<b *ngSwitchCase="1"> Zero</b>
+		<b *ngSwitchCase="2"> Carlos</b>
+		<b *ngSwitchCase="3"> Arthur</b>
+		<b *ngSwitchCase="4"> Sara</b>
+		<b *ngSwitchCase="5"> Siqueira</b>
+		<b *ngSwitchCase="6"> Caio</b>
+		<b *ngSwitchCase="7"> Gabriel</b>
+		<b *ngSwitchCase="8"> Edson</b>
+		<b *ngSwitchCase="9"> Matheus</b>
+		<b *ngSwitchCase="10"> João</b>
+	</div>
 </div>

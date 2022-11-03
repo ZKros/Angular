@@ -7,20 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasEstruturaisComponent implements OnInit {
 	public hide!: boolean;
-	public items = [
-		{nome: 'Arthur'},
-		{nome: 'Breno'},
-		{nome: 'Cleiton'},
-		{nome: 'Daniel'},
-		{nome: 'Emanuel'},
-		{nome: 'Felix'},
-		{nome: 'Gabriel'},
-		{nome: 'Heitor'},
-		{nome: 'Ismael'},
-		{nome: 'Jack'},
-		{nome: 'Lauro'},
-		{nome: 'Manuel'},
-		{nome: 'Marlon'},
+	public selectNumber: number = 0;
+	public items: Array<{ nome: string }> = [
+		{ nome: 'Arthur' },
+		{ nome: 'Breno' },
+		{ nome: 'Cleiton' },
+		{ nome: 'Daniel' },
+		{ nome: 'Emanuel' },
+		{ nome: 'Felix' },
+		{ nome: 'Gabriel' },
+		{ nome: 'Heitor' },
+		{ nome: 'Ismael' },
+		{ nome: 'Jack' },
+		{ nome: 'Kros' },
+		{ nome: 'Lauro' },
+		{ nome: 'Manuel' },
 	]
 	constructor() { }
 
@@ -43,5 +44,21 @@ export class DiretivasEstruturaisComponent implements OnInit {
 		} else {
 			this.hide = false;
 		}
+	}
+
+	addItems() {
+		this.items.push({ nome: "Testando" });
+	}
+
+	deleteItems() {
+		this.items.pop()
+	}
+
+	sumNumber() {
+		this.selectNumber += 1;
+	}
+
+	subNumber() {
+		this.selectNumber -= 1;
 	}
 }
