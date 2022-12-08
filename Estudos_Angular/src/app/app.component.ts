@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
+	public adicionarValor: number = 10;
+
 	constructor() { }
 
 	ngOnInit(): void {
-
 	}
 
+	getDadosPai(e: any) {
+		console.log(e)
+	}
 }

@@ -24,7 +24,7 @@ export class DiretivasAtributosComponent implements OnInit {
 			}
 
 			if (this.height == "20px") {
-				this.height = "40px"
+				this.height = "25px"
 			} else {
 				this.height = "20px"
 			}
