@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-diretivas-estruturais',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./diretivas-estruturais.component.scss']
 })
 export class DiretivasEstruturaisComponent implements OnInit {
+	public form!: FormGroup
 	public hide!: boolean;
-	public selectNumber: number = 0;
+	public selectNumber!: number;
 	public items: Array<{ nome: string }> = [
 		{ nome: 'Arthur' },
 		{ nome: 'Breno' },
@@ -23,9 +25,15 @@ export class DiretivasEstruturaisComponent implements OnInit {
 		{ nome: 'Lauro' },
 		{ nome: 'Manuel' },
 	]
-	constructor() { }
+	constructor(
+		private formBuilder: FormBuilder,
+	) { }
 
 	ngOnInit(): void {
+		this.form = this.formBuilder.group({
+			selectNumber: [0, [Validators.max(10)]]
+		})
+
 		setInterval(() => {
 			if (this.hide === undefined) {
 				this.hide = false;
@@ -55,10 +63,10 @@ export class DiretivasEstruturaisComponent implements OnInit {
 	}
 
 	sumNumber() {
-		this.selectNumber += 1;
+		if (this.selectNumber >= 0 && this.selectNumber <= 10) {
+			this.selectNumber += 1;
+		}
+
 	}
 
-	subNumber() {
-		this.selectNumber -= 1;
-	}
 }

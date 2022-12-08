@@ -1,0 +1,20 @@
+<ng-container *ngIf="tempo;else falso">
+	<div>
+		True
+	</div>
+</ng-container>
+<ng-content #name></ng-content>
+
+<ng-template #falso>
+	<div>
+		False
+	</div>
+</ng-template>
+
+<ng-template ngFor let-item [ngForOf]="list">
+	<div>
+		{{item}}
+	</div>
+</ng-template>
+
+<hr>

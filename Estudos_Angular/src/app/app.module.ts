@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
+import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		TitleComponent,
 		DataBindingComponent,
-  DiretivasEstruturaisComponent
+		DiretivasEstruturaisComponent,
+		DiretivasAtributosComponent,
+		NgTemplateComponent,
+		PipesComponent
 	],
 	imports: [
 		BrowserModule,
