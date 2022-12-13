@@ -31,7 +31,11 @@
 </div>
 
 <div>
-	<!--<app-output [getDados]="getDadosPai($event)"></app-output>-->
+	<app-output (enviarDados)="setDados($event)"></app-output>
+	<ng-template [ngIf]="getDados">
+		<b> {{getDados.nome}} </b>
+		<b> {{getDados.idade}} </b>
+	</ng-template>
 </div>
 
 <router-outlet></router-outlet>
