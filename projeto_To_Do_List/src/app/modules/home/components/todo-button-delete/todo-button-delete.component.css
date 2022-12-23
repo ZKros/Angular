@@ -1,20 +1,18 @@
 :host {
 	display: flex;
 	justify-content: center;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 button {
-	width: 50%;
+	width: 60%;
+	padding: 10px;
 
 	border: none;
-	border-radius: 30%;
+	border-radius: 50px;
 	background: #FF002E;
 
 	font-size: 16px;
 	color: #FFFFFF;
-	text-align: center;
 
-	padding: 10px;
-	box-sizing: border-box;
 }
