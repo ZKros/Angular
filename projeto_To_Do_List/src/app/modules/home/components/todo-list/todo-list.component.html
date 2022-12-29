@@ -6,7 +6,7 @@
 			<input type="checkbox" [(ngModel)]="item.checked">
 			<input type="text" [(ngModel)]="item.task">
 
-			<button class="delete material-symbols-outlined">
+			<button class="delete material-symbols-outlined" (click)="deleteItem(i)">
 				delete
 			</button>
 		</li>
@@ -14,4 +14,4 @@
 </section>
 
 <app-todo-input-add-itens></app-todo-input-add-itens>
-<app-todo-button-delete></app-todo-button-delete>
+<app-todo-button-delete *ngIf="taskList.length" (buttonDelete)="deleteAll()"></app-todo-button-delete>
