@@ -25,8 +25,8 @@ export class TodoListComponent implements OnInit {
 			confirmButtonText: 'Sim',
 			cancelButtonText: 'Não',
 			reverseButtons: true,
-			confirmButtonColor: '#1fd655',
-			cancelButtonColor: '#d33',
+			confirmButtonColor: '#28a745',
+			cancelButtonColor: '#c82333',
 		}).then((result) => {
 			if (result.isConfirmed) {
 				this.taskList.splice(e, 1)
@@ -42,8 +42,8 @@ export class TodoListComponent implements OnInit {
 			confirmButtonText: 'Sim',
 			cancelButtonText: 'Não',
 			reverseButtons: true,
-			confirmButtonColor: '#1fd655',
-			cancelButtonColor: '#d33',
+			confirmButtonColor: '#28a745',
+			cancelButtonColor: '#c82333',
 		}).then((result) => {
 			if (result.isConfirmed) {
 				this.taskList = [];
