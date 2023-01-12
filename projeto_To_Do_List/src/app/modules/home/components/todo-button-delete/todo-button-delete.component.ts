@@ -6,14 +6,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 	styleUrls: ['./todo-button-delete.component.css']
 })
 export class TodoButtonDeleteComponent implements OnInit {
-	@Output() buttonDelete = new EventEmitter()
+	@Output() task = new EventEmitter()
 
 	constructor() { }
 
 	ngOnInit(): void {
 	}
 
-	public clickDelete(e: MouseEvent) {
-		this.buttonDelete.emit(e)
+	delete(e: MouseEvent) {
+		this.task.emit(e)
 	}
 }

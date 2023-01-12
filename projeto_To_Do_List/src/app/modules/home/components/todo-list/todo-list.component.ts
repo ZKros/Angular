@@ -8,10 +8,8 @@ import { TaskList } from '../../model/task-list';
 	styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-	public taskList: Array<TaskList> = [
-		{ task: "Minha nova Task", checked: true },
-		{ task: "Concluido", checked: false }
-	]
+	public taskList: Array<TaskList> = [];
+	
 	constructor() { }
 
 	ngOnInit(): void {
@@ -34,7 +32,7 @@ export class TodoListComponent implements OnInit {
 		})
 	}
 
-	public deleteAll() {
+	public deleteAllTask() {
 		Swal.fire({
 			text: "Tem certeza que quer deleter todas as tarefas?",
 			icon: 'warning',
@@ -49,6 +47,10 @@ export class TodoListComponent implements OnInit {
 				this.taskList = [];
 			}
 		})
+	}
+
+	newTask(e: string) {
+		this.taskList.push({ task: e, checked: false })
 	}
 
 }

@@ -13,5 +13,5 @@
 	</ul>
 </section>
 
-<app-todo-input-add-itens></app-todo-input-add-itens>
-<app-todo-button-delete *ngIf="taskList.length" (buttonDelete)="deleteAll()"></app-todo-button-delete>
+<app-todo-input-add-itens (task)="newTask($event)"></app-todo-input-add-itens>
+<app-todo-button-delete *ngIf="taskList.length" (task)="deleteAllTask()"></app-todo-button-delete>
