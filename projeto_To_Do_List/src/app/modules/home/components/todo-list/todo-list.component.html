@@ -4,9 +4,10 @@
 	<ul *ngIf="taskList.length">
 		<li *ngFor="let item of taskList; let i = index">
 			<input type="checkbox" [(ngModel)]="item.checked">
-			<input type="text" [(ngModel)]="item.task">
+			<input type="text" (change)="deleteItem(i,item.task)" [(ngModel)]="item.task"
+				[ngClass]="{'checked': item.checked}">
 
-			<button class="delete material-symbols-outlined" (click)="deleteItem(i)">
+			<button class="delete material-symbols-outlined" (click)="deleteItem(i,'delete')">
 				delete
 			</button>
 		</li>
