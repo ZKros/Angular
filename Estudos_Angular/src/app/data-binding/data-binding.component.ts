@@ -9,7 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';;
 export class DataBindingComponent implements OnInit {
 	public nome: string = "Daniel";
 	public anoAtual!: number;
-	public idade: number = 23;
+	public idade: number = 20;
+	public teste2: number = 1212;
+	public comissao: number = this.idade * (this.teste2 / 100);
 	public form!: FormGroup;
 	public imgSrc: string = "https://thumbs.dreamstime.com/b/business-leader-assembling-phrase-good-job-white-cards-letters-them-wooden-background-order-to-compliment-58933365.jpg"
 	public hide: boolean = true;
@@ -33,7 +35,7 @@ export class DataBindingComponent implements OnInit {
 
 	alertaInfo(value: MouseEvent) {
 		console.log(value);
-		
+
 	}
 
 	mouseMoveTeste(value: MouseEvent) {
