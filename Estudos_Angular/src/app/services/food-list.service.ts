@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 	providedIn: 'root'
 })
 export class FoodListService {
-	private list: Array<string> = [
+	private foodTruck: Array<string> = [
 		"X-Bacon",
 		"X-Salada",
 		"X-Tudo"
@@ -13,6 +13,6 @@ export class FoodListService {
 	constructor() { }
 
 	public foodList() {
-		return this.list;
+		return this.foodTruck;
 	}
 }

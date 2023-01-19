@@ -11,6 +11,13 @@ import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atr
 import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { SharedModule } from './shared/shared.module';
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule } from '@angular/common/http';
+
+
+export function tokenGetter() {
+	return localStorage.getItem("access_token");
+}
 
 @NgModule({
 	declarations: [
@@ -22,14 +29,22 @@ import { SharedModule } from './shared/shared.module';
 		NgTemplateComponent,
 		PipesComponent
 	],
+	providers: [],
+	bootstrap: [AppComponent],
 	imports: [
 		BrowserModule,
 		SharedModule,
 		AppRoutingModule,
 		FormsModule,
-		ReactiveFormsModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+		ReactiveFormsModule,
+		HttpClientModule,
+		JwtModule.forRoot({
+			config: {
+				tokenGetter: tokenGetter,
+				allowedDomains: ["http://localhost:3000/"],
+				disallowedRoutes: ["http://localhost:3000/home"]
+			}
+		})
+	]
 })
 export class AppModule { }

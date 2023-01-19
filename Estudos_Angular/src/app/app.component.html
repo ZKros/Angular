@@ -1,41 +1,26 @@
-<div>
-	<app-title title="LifeHooks Angular"></app-title>
-</div>
+<app-title title="LifeHooks Angular"></app-title>
 
-<div>
-	<app-data-binding></app-data-binding>
-</div>
+<app-data-binding></app-data-binding>
 
-<div>
-	<app-diretivas-estruturais></app-diretivas-estruturais>
-</div>
+<app-diretivas-estruturais></app-diretivas-estruturais>
 
-<div>
-	<app-diretivas-atributos></app-diretivas-atributos>
-</div>
+<app-diretivas-atributos></app-diretivas-atributos>
 
-<div>
-	<app-ng-template></app-ng-template>
-</div>
+<app-ng-template></app-ng-template>
 
-<div>
-	<app-pipes></app-pipes>
-</div>
+<app-pipes></app-pipes>
 
-<div>
-	<app-new-component></app-new-component>
-</div>
+<app-new-component></app-new-component>
 
-<div>
-	<app-input [contador]="adicionarValor"></app-input>
-</div>
+<app-input [contador]="adicionarValor"></app-input>
 
-<div>
-	<app-output (enviarDados)="setDados($event)"></app-output>
-	<ng-template [ngIf]="getDados">
-		<b> {{getDados.nome}} </b>
-		<b> {{getDados.idade}} </b>
-	</ng-template>
-</div>
+<app-output (enviarDados)="setDados($event)"></app-output>
+<ng-template [ngIf]="getDados">
+	<b> {{getDados.nome}} </b>
+	<b> {{getDados.idade}} </b>
+</ng-template>
+
+<app-food-list></app-food-list>
+
 
 <router-outlet></router-outlet>

@@ -15,30 +15,30 @@ export class TitleComponent implements OnInit, OnChanges, DoCheck, AfterContentI
 	}
 
 	ngOnDestroy(): void {
-		console.log("ngOnDestroy");
+		//console.log("ngOnDestroy");
 	}
 	ngOnChanges(changes: SimpleChanges): void {
-		console.log("Alterado com sucesso");
+		//console.log("Alterado com sucesso");
 	}
 
 	ngDoCheck(): void {
-		console.log("ngDoCheck");
+		//console.log("ngDoCheck");
 	}
 
 	ngAfterContentInit(): void {
-		console.log("ngAfterContentInit");
+		//console.log("ngAfterContentInit");
 	}
 
 	ngAfterContentChecked(): void {
-		console.log("ngAfterContentChecked");
+		//console.log("ngAfterContentChecked");
 	}
 
 	ngAfterViewChecked(): void {
-		console.log("ngAfterViewChecked");
+		//console.log("ngAfterViewChecked");
 	}
 
 	ngAfterViewInit(): void {
-		console.log("ngAfterViewInit");
+		//console.log("ngAfterViewInit");
 	}
 
 	adicionar(): number {

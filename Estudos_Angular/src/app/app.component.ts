@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 	public adicionarValor: number = 10;
 	public getDados: { nome: string, idade: number } | undefined
+
 	constructor() { }
 
-	ngOnInit(): void {
-	}
+	ngOnInit(): void { }
 
 	setDados(e: { nome: string, idade: number }) {
 		this.getDados = e
-		console.log(this.getDados)
+
 	}
 }
