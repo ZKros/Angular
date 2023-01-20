@@ -1,6 +1,6 @@
-<form [formGroup]="foodForm">
+<form [formGroup]="foodForm" (ngSubmit)="save()">
 	<mat-form-field>
-		<mat-label>Favorite food</mat-label>
-		<input matInput>
+		<input formControlName="food" matInput placeholder="Adicionar Comida" required>
 	</mat-form-field>
+	<button [disabled]="foodForm.invalid" type="submit">Adicionar</button>
 </form>

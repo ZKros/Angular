@@ -1,5 +1,5 @@
 
 
 export class FoodAddModel {
-	food?: string = undefined
+	food: string = ''
 }
