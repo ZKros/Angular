@@ -1,11 +1,16 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { FoodAddModel } from '../model/food-add.model';
+
+export interface IFood {
+	food: String
+}
 
 @Injectable({
 	providedIn: 'root'
 })
 export class FoodListService {
-	private foodTruck: Array<FoodAddModel> = [
+	public event = new EventEmitter
+	private foodTruck: IFood[] = [
 		{ food: "X-Bacon" },
 		{ food: "X-Salada" },
 		{ food: "X-Tudo" },
@@ -18,7 +23,12 @@ export class FoodListService {
 	}
 
 	public foodListAdd(obj: FoodAddModel) {
-		console.log(this.foodTruck.push(...[obj]))
-		return this.foodTruck.push(...[obj])
+		this.foodListAlert(obj)
+		this.foodTruck.push(obj)
+		return this.foodTruck = [...this.foodTruck]
+	}
+
+	public foodListAlert(obj: FoodAddModel) {
+		return this.event.emit(obj)
 	}
 }

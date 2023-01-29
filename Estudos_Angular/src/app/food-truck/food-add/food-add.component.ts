@@ -20,8 +20,9 @@ export class FoodAddComponent implements OnInit {
 
 	save() {
 		if (this.foodForm.valid) {
-			return this.foodListService.foodListAdd(this.foodForm.getRawValue())
+			this.foodListService.foodListAdd(this.foodForm.getRawValue())
+			this.foodForm.reset()
 		}
-		return
+
 	}
 }
